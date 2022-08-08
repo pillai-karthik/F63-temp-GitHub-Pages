@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Face</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="./Images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./mp_js/control_utils@0.6/control_utils.css" crossorigin="anonymous">
+    <script src="./mp_js/camera_utils@0.3/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="./mp_js/control_utils@0.6/control_utils.js" crossorigin="anonymous"></script>
+    <script src="./mp_js/drawing_utils@0.3/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="./mp_js/face_mesh@0.4/face_mesh.js" crossorigin="anonymous"></script>
+    <script type="module" src="./script.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+  <!-- partial:index.partial.html -->
+    <div class="container">
+      <video class="input_video"></video>
+      <div class="canvas-container">
+        <canvas class="output_canvas" width="1280px" height="720px"></canvas>
+      </div>
+      <div class="loading">
+        <div class="spinner"></div>
+        <div class="message">
+          Loading
+        </div>
+      </div>
+      <!-- <a class="abs logo" href="http://www.mediapipe.dev" target="_blank">
+        <div style="display: flex;align-items: center;bottom: 0;right: 10px;">
+          <img class="logo" src="logo_white.png" alt="" style="
+            height: 50px;">
+          <span class="title">MediaPipe</span>
+        </div>
+      </a>
+      <div class="shoutout">
+        <div>
+          <a href="https://solutions.mediapipe.dev/face_mesh">
+            Click here for more info
+          </a>
+        </div>
+      </div> -->
+    </div>
+    <div class="control-panel"></div>
+    <button type="button" id="mesh_btn" class="mesh_btn mesh_active">Toggle Mesh</button>
+    <div class="popup">
+      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+      <img src="./Images/0.png" alt="Face position" id="pos_img" width="300px" height="300px">
+      <button type="button" class="close_btn">OK</button>
+    </div>
+    <!-- partial -->
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

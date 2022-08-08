@@ -1,0 +1,193 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.abs {
+  position: absolute;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: lightblue;
+}
+
+body {
+  bottom: 0;
+  font-family: "Titillium Web", sans-serif;
+  color: white;
+  left: 0;
+  margin: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform-origin: 0px 0px;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  background-color: #596e73;
+  max-height: 100%;
+}
+
+.input_video {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.input_video.selfie {
+  transform: scale(-1, 1);
+}
+
+.input_image {
+  position: absolute;
+}
+
+.canvas-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.output_canvas {
+  display: block;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.logo {
+  bottom: 10px;
+  right: 20px;
+}
+.logo .title {
+  color: white;
+  font-size: 28px;
+}
+.logo .subtitle {
+  position: relative;
+  color: white;
+  font-size: 10px;
+  left: -30px;
+  top: 20px;
+}
+
+.control-panel {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.mesh_btn {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  padding: 20px 50px;
+  text-align: left;
+  outline: none;
+  border-radius: 8px;
+  transition-duration: 0.5s;
+  font-size: x-large;
+  font-weight: bold;
+  background-color: #FF4793;
+  color: white;
+  border:5px solid #FF4793;
+}
+.mesh_btn:hover {
+  background-color: white;
+  color: #e63600; /* Green */
+}
+.mesh_active{
+  background-color: #00c9c9;
+  color: white;
+  border:5px solid #00c9c9;
+}
+.mesh_active:hover {
+  background-color: white;
+  color: #4CAF50; /* Green */
+}
+.popup {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  padding: 20px 18px;
+  visibility: hidden;
+  background-color: #909090;
+  text-align: center;
+  transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+  visibility: visible;
+  top:50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup button{
+  width: 100%;
+  padding: 10px 0px;
+  background-color: #6fd649;
+  color: #fff;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+.popup button:hover {
+  border:2px solid #6fd649;
+  outline: #6fd649;
+  background-color: #fff;
+  color: #6fd649;
+}
+.loading {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  backface-visibility: hidden;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 1s;
+}
+.loading .message {
+  font-size: x-large;
+}
+.loading .spinner {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+  border: 32px solid #bebebe;
+  border-top: 32px solid #00c9c9;
+  border-radius: 50%;
+}
+
+.loaded .loading {
+  opacity: 0;
+}
+
+.shoutout {
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  text-align: center;
+  font-size: 24px;
+  position: absolute;
+}
